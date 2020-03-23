@@ -1,0 +1,119 @@
+@font-face {
+    font-family: 'Mason Regular';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Mason Regular'), url('../resources/Fonts/MasonRegular.ttf') format('truetype');
+
+}
+
+@font-face {
+    font-family: 'MansonBold';
+    font-style: normal;
+    font-weight: bold;
+    src: local('MansonBold'), url('../resources/Fonts/MansonBold.otf') format('truetype');
+}
+
+
+.root{
+    -fx-background-image: url("../resources/Main_window/back.jpg");
+    -fx-background-repeat: stretch;
+    -fx-background-size: 100%;
+    -fx-background-color: black;
+    -fx-background-position: center;
+    -fx-font-family: "Mason Regular";
+}
+/*Top*/
+Button {
+    -fx-font-size: 100%;
+    -fx-text-fill: white;
+    -fx-font-family: "MansonBold";
+    -fx-background-color: black;
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );
+}
+
+Button:hover{
+    -fx-font-family: "MansonBold";
+    -fx-background-color: -fx-shadow-highlight-color, -fx-outer-border, -fx-inner-border, -fx-body-color;
+    -fx-background-insets: 0 0 -1 0, 0, 1, 2;
+    -fx-background-radius: 3px, 3px, 2px, 1px;
+    -fx-padding: 0.333333em 0.666667em 0.333333em 0.666667em; /* 4 8 4 8 */
+    -fx-text-fill: -fx-text-base-color;
+    -fx-alignment: CENTER;
+    -fx-content-display: LEFT;
+}
+
+Label{
+    -fx-text-fill: white;
+}
+
+/*Left*/
+#left_VBox1{
+    -fx-pref-height: 200.0;
+    -fx-pref-width: 450.0;
+    -fx-padding: 10, 10, 10, 10;
+}
+#title1{
+    -fx-font-size: 230%;
+}
+ToggleButton {
+    -fx-background-color: black;
+}
+
+ToggleButton:selected{
+    -fx-background-color: darkcyan;
+}
+ToggleButton:hover{
+    -fx-background-color: darkcyan;
+
+}
+
+#choose_your_destiny_vbox{
+    -fx-pref-height: 200.0;
+    -fx-pref-width: 450.0;
+    -fx-padding: 10, 10, 10, 10;
+}
+
+#choose_your_destiny_lable{
+    -fx-font-size: 230%;
+}
+
+#start_game_button{
+    -fx-pref-height: 30;
+    -fx-pref-width: 300;
+    -fx-font-size: 170%;
+    -fx-alignment: CENTER;
+    -fx-column-display: BOTTOM;
+}
+
+#labelText1{
+    -fx-background-color: black;
+    -fx-fill: white;
+    -fx-cell-size: inherit;
+    -fx-wrap-text: false;
+    -fx-pref-width: 1000;
+    -fx-font-style: italic;
+    -fx-font-size: 135%;
+    -fx-font-weight: bold;
+}
+
+#labelText2{
+    -fx-background-color: black;
+    -fx-fill: white;
+    -fx-cell-size: inherit;
+    -fx-wrap-text: false;
+    -fx-pref-width: 1000;
+    -fx-font-style: italic;
+    -fx-font-size: 135%;
+    -fx-font-weight: bold;
+}
+
+#HBoxBottom{
+    -fx-background-color: black;
+    -fx-pref-height: 200;
+}
+
+#musicB{
+    -fx-background-color: black;
+    -fx-spacing: 10;
+}
+

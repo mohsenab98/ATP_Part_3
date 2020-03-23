@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane prefHeight="-Infinity" prefWidth="-Infinity" stylesheets="@Win.css" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View.MazeViewController">
+    <top>
+
+        <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity">
+            <Label fx:id="header" prefHeight="73.0" prefWidth="496.0" text="Congratulations!" textAlignment="CENTER" />
+        </HBox>
+
+    </top>
+
+    <center>
+        <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity">
+            <Label text="You have made the impossible!" />
+            <Label text="Now you are the KING " />
+            <Label text="of the Seven Kingdoms!" />
+        </VBox>
+    </center>
+
+
+</BorderPane>

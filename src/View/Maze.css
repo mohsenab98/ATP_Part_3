@@ -1,0 +1,110 @@
+
+@font-face {
+    font-family: 'Mason Regular';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Mason Regular'), url('../resources/Fonts/MasonRegular.ttf') format('truetype');
+
+}
+
+@font-face {
+    font-family: 'MansonBold';
+    font-style: normal;
+    font-weight: bold;
+    src: local('MansonBold'), url('../resources/Fonts/MansonBold.otf') format('truetype');
+}
+
+
+.root{
+    /*-fx-background-image: url("/map.jpg");*/
+    -fx-background-repeat: stretch;
+    -fx-background-size: 100%;
+    -fx-background-color: black;
+    -fx-background-position: center;
+    -fx-font-family: "Mason Regular";
+}
+/*Top*/
+
+
+left{
+    -fx-background-color: orange;
+}
+
+/*#pane {*/
+    /*-fx-border-style: double;*/
+    /*-fx-border-color: black;*/
+    /*-fx-border-width: 15;*/
+/*}*/
+#solve{
+    -fx-max-width: 150;
+    -fx-wrap-text : true;
+    -fx-font-size: 150%;
+    -fx-text-fill: white;
+    -fx-font-family: "MansonBold";
+    -fx-background-color: black;
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );
+    /*-fx-pref-width: 400;*/
+}
+#solve:hover{
+    -fx-font-family: "MansonBold";
+    -fx-background-color: -fx-shadow-highlight-color, -fx-outer-border, -fx-inner-border, -fx-body-color;
+    -fx-background-insets: 0 0 -1 0, 0, 1, 2;
+    -fx-background-radius: 3px, 3px, 2px, 1px;
+    -fx-padding: 0.333333em 0.666667em 0.333333em 0.666667em; /* 4 8 4 8 */
+    -fx-text-fill: -fx-text-base-color;
+    -fx-alignment: CENTER;
+    -fx-content-display: LEFT;
+}
+
+#config_vbox{
+    -fx-pref-height: 200.0;
+    -fx-pref-width: 150.0;
+    -fx-padding: 10, 10, 10, 10;
+    -fx-padding: 10;
+
+}
+
+#mazeVBOXCersi{
+    -fx-border-width: 10 10 10 10;
+    -fx-border-image-source: url("../resources/Cersei/goldenWall.jpg");
+    -fx-border-image-repeat: stretch;
+    -fx-border-image-width: 20;
+    -fx-border-image-slice: 30;
+
+}
+
+#mazeVBOXJon{
+    -fx-border-width: 10 10 10 10;
+    -fx-border-image-source: url("../resources/Snow/Ice.jpg");
+    -fx-border-image-repeat: stretch;
+    -fx-border-image-width: 20;
+    -fx-border-image-slice: 30;
+
+}
+
+#mazeVBOXKhalessi{
+    -fx-border-width: 10 10 10 10;
+    -fx-border-image-source: url("../resources/Khaleesi/fireWall.jpg");
+    -fx-border-image-repeat: stretch;
+    -fx-border-image-width: 20;
+    -fx-border-image-slice: 25;
+
+}
+
+#mazeVBOXStannis{
+    -fx-border-width: 10 10 10 10;
+    -fx-border-image-source: url("../resources/Stannis/brownWall.jpg");
+    -fx-border-image-repeat: stretch;
+    -fx-border-image-width: 20;
+    -fx-border-image-slice: 30;
+
+}
+
+.scroll-pane > .viewport {
+    -fx-background-color: black;
+}
+
+.scroll-pane{
+    -fx-background-color: black;
+    -fx-background-radius: 2em;
+}

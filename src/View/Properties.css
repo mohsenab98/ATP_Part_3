@@ -1,0 +1,19 @@
+@font-face {
+    font-family: 'Mason Regular';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Mason Regular'), url('../resources/Fonts/MasonRegular.ttf') format('truetype');
+
+}
+
+.root{
+    -fx-background-size: 100%;
+    -fx-font-size: 150%;
+    -fx-background-color: black;
+    -fx-background-position: center;
+    -fx-font-family: "Mason Regular";
+}
+
+Label{
+    -fx-text-fill: white;
+}

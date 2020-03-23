@@ -1,0 +1,26 @@
+@font-face {
+    font-family: 'Mason Regular';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Mason Regular'), url('../resources/Fonts/MasonRegular.ttf') format('truetype');
+
+}
+
+.root{
+    -fx-background-size: 100%;
+    -fx-background-color: black;
+    -fx-background-position: center;
+    -fx-background-image: url("../resources/Win_window/throneWallPaper.jpg");
+    -fx-background-repeat: stretch;
+    -fx-font-family: "Mason Regular";
+}
+
+Label{
+    -fx-text-fill: white;
+    -fx-font-size: 36;
+}
+
+#header{
+    -fx-font-size: 50;
+    -fx-alignment: CENTER;
+}

@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import View.MazeDisplayer?>
+<BorderPane fx:id="mazeBoard"
+            onKeyPressed="#KeyPressed"
+            onScroll="#scrollMaze"
+            xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            stylesheets="@Maze.css"
+            fx:controller="View.MazeViewController"
+            prefHeight="400.0" prefWidth="600.0">
+    <top>
+        <VBox BorderPane.alignment="CENTER">
+            <children>
+                <MenuBar>
+                    <menus>
+                        <Menu mnemonicParsing="false" text="File">
+                            <items>
+                                <MenuItem mnemonicParsing="false" text="New" onAction="#newGenerate"/>
+                            </items>
+                            <items>
+                                <MenuItem mnemonicParsing="false" text="Save" onAction="#saveMaze" />
+                            </items>
+                            <items>
+                                <MenuItem mnemonicParsing="false" text="Exit" onAction="#exit" />
+                            </items>
+                        </Menu>
+
+                        <Menu mnemonicParsing="false" text="About">
+                            <items>
+                                <MenuItem mnemonicParsing="false" text="Algorithms" onAction="#algoInfo"/>
+                            </items>
+                            <items>
+                                <MenuItem mnemonicParsing="false" text="Programmers" onAction="#progInfo" />
+                            </items>
+                        </Menu>
+                        <Menu mnemonicParsing="false" text="Help">
+                            <items>
+                                <MenuItem mnemonicParsing="false" text="Game Rules" onAction="#GameRules" />
+                            </items>
+                            <items>
+                                <MenuItem mnemonicParsing="false" text="Solve" onAction="#SolveButton" />
+                            </items>
+                        </Menu>
+
+                    </menus>
+                </MenuBar>
+            </children>
+        </VBox>
+    </top>
+    <left>
+        <VBox fx:id="config_vbox">
+            <GridPane fx:id="hard_level_grid" alignment="TOP_CENTER" prefHeight="310.0" prefWidth="330.0">
+                <rowConstraints>
+                    <RowConstraints minHeight="10.0" prefHeight="10.0" vgrow="SOMETIMES" />
+                    <RowConstraints minHeight="10.0" prefHeight="10.0" vgrow="SOMETIMES" />
+                </rowConstraints>
+                <!--<Button fx:id="Start" onAction="#generateMaze" prefHeight="25.0" prefWidth="91.0" text="Start" GridPane.halignment="CENTER" GridPane.rowIndex="0" />-->
+                <Button fx:id="solve" onAction="#solveMaze"  text="Show me road to the Iron Throne !" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+            </GridPane>
+        </VBox>
+    </left>
+
+    <center>
+        <ScrollPane fx:id="scroll_bar">
+            <VBox fx:id="mazeVBOXStannis" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity">
+
+                <Pane BorderPane.alignment="CENTER">
+                    <children>
+                        <MazeDisplayer fx:id="mazeDisplayer" height="600.0" width="600.0"
+                                       imageFileNamePath="resources/Maze_window/white_box.png"
+                                       imageFileNameExit="resources/Maze_window/throne.png"
+                                       imageFileNameSolution="resources/Maze_window/crown.png"
+                                       imageFileNameCharacter="resources/Stannis/Stannis_pixelArt.png"
+                                       imageFileNameWall="Resources/Stannis/brownWall.jpg"
+
+                                       onMouseDragged="#mouseDrag"
+                                       onMouseReleased="#mouseReleased"/>
+                    </children>
+
+                </Pane>
+
+            </VBox>
+        </ScrollPane>
+    </center>
+
+
+
+</BorderPane>

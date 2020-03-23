@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import View.MazeDisplayer?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane fx:id="mazeBoard" onKeyPressed="#KeyPressed" onScroll="#scrollMaze" stylesheets="@Maze.css" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View.MazeViewController">
+    <top>
+        <VBox BorderPane.alignment="CENTER">
+            <children>
+                <MenuBar>
+                    <menus>
+                        <Menu mnemonicParsing="false" text="File">
+                            <items>
+                                <MenuItem mnemonicParsing="false" onAction="#newGenerate" text="New" />
+                            </items>
+                            <items>
+                                <MenuItem mnemonicParsing="false" onAction="#saveMaze" text="Save" />
+                            </items>
+                            <items>
+                                <MenuItem mnemonicParsing="false" onAction="#exit" text="Exit" />
+                            </items>
+                        </Menu>
+
+                        <Menu mnemonicParsing="false" text="About">
+                            <items>
+                                <MenuItem mnemonicParsing="false" onAction="#algoInfo" text="Algorithms" />
+                            </items>
+                            <items>
+                                <MenuItem mnemonicParsing="false" onAction="#progInfo" text="Programmers" />
+                            </items>
+                        </Menu>
+                        <Menu mnemonicParsing="false" text="Help">
+                            <items>
+                                <MenuItem mnemonicParsing="false" onAction="#GameRules" text="Game Rules" />
+                            </items>
+                            <items>
+                                <MenuItem mnemonicParsing="false" onAction="#SolveButton" text="Solve" />
+                            </items>
+                        </Menu>
+
+                    </menus>
+                </MenuBar>
+            </children>
+        </VBox>
+    </top>
+
+    <left>
+        <VBox fx:id="config_vbox">
+            <GridPane fx:id="hard_level_grid" alignment="TOP_CENTER" prefHeight="310.0" prefWidth="330.0">
+                <rowConstraints>
+                    <RowConstraints minHeight="10.0" prefHeight="10.0" vgrow="SOMETIMES" />
+                    <RowConstraints minHeight="10.0" prefHeight="10.0" vgrow="SOMETIMES" />
+                </rowConstraints>
+                <!--<Button fx:id="Start" onAction="#generateMaze" prefHeight="25.0" prefWidth="91.0" text="Start" GridPane.halignment="CENTER" GridPane.rowIndex="0" />-->
+                <Button fx:id="solve" onAction="#solveMaze" text="Show me road to the Iron Throne !" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+            <columnConstraints>
+               <ColumnConstraints />
+            </columnConstraints>
+            </GridPane>
+        </VBox>
+    </left>
+
+    <center>
+        <ScrollPane fx:id="scroll_bar">
+            <VBox fx:id="mazeVBOXJon">
+
+                <Pane fx:id="pane" BorderPane.alignment="CENTER">
+                    <children>
+                        <MazeDisplayer fx:id="mazeDisplayer" height="600" width="600"
+                                       imageFileNamePath="resources/Maze_window/white_box.png"
+                                       imageFileNameExit="resources/Maze_window/throne.png"
+                                       imageFileNameSolution="resources/Maze_window/crown.png"
+                                       imageFileNameCharacter="resources/Snow/jon_pixelArt.png"
+                                       imageFileNameWall="resources/Snow/Ice.jpg"
+
+                                       onMouseDragged="#mouseDrag"
+                                       onMouseReleased="#mouseReleased"/>
+                    </children>
+
+                </Pane>
+
+            </VBox>
+        </ScrollPane>
+    </center>
+
+
+</BorderPane>
