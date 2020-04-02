@@ -3,3 +3,4 @@
 "Maze Game" - java Project!
 * Generating & Solving new mazes using DFS, BFS, BEST algorithms.
 * user interface written by javaFx (awesome "Game of Thrones" interface :)
+* Client-server model using the Model-View-ViewModel architecture.
